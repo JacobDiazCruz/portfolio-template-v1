@@ -83,3 +83,20 @@ body {
 
  }
 }
+
+.heading {
+  animation: blurEffect 1s ease;
+}
+
+/* Add this CSS to your global styles or in a <style> tag inside your component */
+@keyframes blurEffect {
+  0% {
+    filter: blur(30px);
+  }
+  50% {
+    filter: blur(30px); /* Blur in the middle of the animation */
+  }
+  100% {
+    filter: blur(0); /* End without blur */
+  }
+}

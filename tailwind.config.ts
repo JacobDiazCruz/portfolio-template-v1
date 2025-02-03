@@ -15,6 +15,7 @@ export default {
         // 'mono': 'Times New Roman'
       },
       colors: {
+        "dark-main": "#1D1D1F",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
