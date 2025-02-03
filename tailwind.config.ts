@@ -1,5 +1,3 @@
-import type { Config } from "tailwindcss";
-
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cormorant: ["Cormorant", "serif"],
+        inria: ["Inria", "serif"],
+        work: ["Work", "sans"],
+        // 'body': 'BlinkMacSystemFont',
+        helvetica: 'Helvetica, Arial, sans-serif',
+        // 'mono': 'Times New Roman'
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -15,4 +21,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+};
