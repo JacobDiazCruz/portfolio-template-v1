@@ -35,7 +35,8 @@ body {
 }
 
 .content-section {
-  padding: calc(var(--grid--app-xheight) - 11px) 0 80px 0 !important;
+  /* padding: calc(var(--grid--app-xheight) - 11px) 0 80px 0 !important; */
+  padding: 100px 0 100px 0;
 }
 
 .home-text{
@@ -98,5 +99,70 @@ body {
   }
   100% {
     filter: blur(0); /* End without blur */
+  }
+}
+
+.blur-one {
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
+}
+
+.blur-two {
+  animation: bounce 500ms;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
+}
+
+.blur-three {
+  animation: bounce 700ms;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
+}
+
+.blur-four {
+  animation: bounce 900ms;
+  animation-delay: 3s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+
+  to {
+      -webkit-transform: translate3d(0, 200px, 0);
+      transform: translate3d(0, 200px, 0);
+  }
+}
+
+.water::after {
+  content: "";
+  width: 204%;
+  height: 204%;
+  background-color: white;
+  position: fixed;
+  top: -150%;
+  left: -52%;
+  border-radius: 40%;
+  animation: anim 11s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

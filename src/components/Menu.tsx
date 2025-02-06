@@ -63,7 +63,7 @@ export default function Menu() {
             <ul className="space-y-1 h-[400px]">
               {menuItems.map((item: any, idx: number) => (
                 <li className="flex items-center gap-2 cursor-pointer" key={idx}>
-                  <div className="h-[1px] bg-neutral-300 w-[8px]"></div>
+                  {/* <div className="h-[1px] bg-neutral-300 w-[8px]"></div> */}
                   <span
                     className={`${item.active ? "text-dark-main" : "text-neutral-400"} font-medium`}
                   >
@@ -77,26 +77,25 @@ export default function Menu() {
       )}
     </header>
 
-
-      <div id="sidebar" className="hidden md:block fixed h-[100vh]">
-        <div className="p-10">
-          <div className="font-semibold text-2xl">J.</div>
-        </div>
-        <div className="flex items-center justify-center">
-          <div className="flex flex-col items-center px-10 mt-[100px]">
-            <ul className="space-y-1 h-[400px]">
-              {menuItems.map((item: any, idx: number) => (
-                <li className="flex items-center gap-2 cursor-pointer" key={idx}>
-                  <div className="h-[1px] bg-neutral-300 w-[8px]"></div>
-                  <span className={`${item.active ? "text-dark-main" : "text-neutral-400"} font-medium`}>
-                    {item.label}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <div id="sidebar" className="hidden md:block fixed h-[100vh]">
+      <div className="p-10">
+        <div className="font-semibold text-2xl">J.</div>
+      </div>
+      <div className="flex items-center justify-center">
+        <div className="flex flex-col items-center px-10 mt-[100px]">
+          <ul className="space-y-1 h-[400px]">
+            {menuItems.map((item: any, idx: number) => (
+              <li className="flex items-center gap-2 cursor-pointer" key={idx}>
+                {/* <div className="h-[1px] bg-neutral-300 w-[8px]"></div> */}
+                <span className={`${item.active ? "text-dark-main" : "text-neutral-400"} font-medium`}>
+                  {item.label}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
+    </div>
     </>
   );
 }
