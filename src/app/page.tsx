@@ -111,7 +111,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="about">
+          <section>
             <h4 className="text-md md:text-2xl font-medium text-neutral-600">Regardless of the tech stack,</h4>
             <div className="flex gap-1">
               <h2 className="text-3xl md:text-5xl font-semibold text-dark-main">My priority is to make a&nbsp;
@@ -145,7 +145,7 @@ export default function Home() {
               ))}
             </div>
           </section>
-          <section id="works" className="content-section w-full lg:w-[900px] border-t">
+          <section id="experience" className="content-section w-full lg:w-[900px] border-t">
             <h4 className="text-lg md:text-lg font-semibold text-neutral-500">Experience</h4>
             <div className="w-full flex flex-col gap-y-[50px] mt-[50px]">
               {Experiences.map((exp: any, idx: number) => (
