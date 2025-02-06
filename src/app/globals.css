@@ -86,7 +86,21 @@ body {
 }
 
 .heading {
-  animation: blurEffect 1s ease;
+  /* animation: blurEffect 1s ease; */
+  animation: shine 3s ease;
+  background: linear-gradient(to right, rgba(0,0,0,1) 45%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 55%, rgba(0,0,0,1) 100%);
+  -webkit-background-clip: text;
+  color: rgba(255,255,255,0);
+  background-size: 190%;
+}
+
+.heading-two {
+  /* animation: blurEffect 1s ease; */
+  animation: shine 3s infinite;
+  background: linear-gradient(to right, rgba(99,99,99,1) 45%, rgba(255,255,255,1) 50%, rgba(99,99,99,1) 55%, rgba(99,99,99,1) 100%);
+  -webkit-background-clip: text;
+  color: rgba(99,99,99,0);
+  background-size: 200%;
 }
 
 /* Add this CSS to your global styles or in a <style> tag inside your component */
@@ -99,6 +113,15 @@ body {
   }
   100% {
     filter: blur(0); /* End without blur */
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
   }
 }
 

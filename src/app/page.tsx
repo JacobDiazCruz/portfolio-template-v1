@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { FaReact } from "react-icons/fa6";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -7,6 +9,7 @@ import { FaDocker } from "react-icons/fa6";
 import Menu from "@/components/Menu";
 import { TECH_LIST } from "@/config";
 import BlobContainer from "@/components/BlobContainer";
+import { useState } from "react";
 
 export default function Home() {
 
@@ -41,9 +44,9 @@ export default function Home() {
     }
   ];
 
-  const Works = [
+  const [works, setWorks] = useState([
     {
-      imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*zozNB64v55MEzlvOE9lHnQ.png",
+      imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1738643606/Portfolio-templates/Screenshot_2025-02-04_at_12.33.02_PM_q4nuyi.png",
       title: "OneGuru",
       description: "The free and fun way for devs to learn UI/UX design.",
     },
@@ -62,28 +65,23 @@ export default function Home() {
       title: "Manuela",
       description: "The free and fun way for devs to learn UI/UX design.",
     },
-  ]
+  ]);
 
   return (
-    <div className="w-full bg-white font-sans">
+    <div className="w-full bg-white font-sans overflow-hidden relative">
       <Menu />
       {/* font-[family-name:var(--font-geist-mono)] */}
       {/* font-[family-name:var(--font-geist-sans)] */}
-      <div className="water blur-[40px] fixed opacity-[0.3] mt-[300px] mr-auto w-[350px] h-[600px] rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-red-500"></div>
-      <section className="page-body grid grid-cols-12 gap-4 items-center justify-center">
-        <div id="content" className="col-start-2 col-end-13 md:col-start-5 md:col-end-13">
-          {/* <div className="z-5 absolute right-0 -mt-[400px] flex">
-            <div className="blur-one bg-gradient-to-r from-[#85C4FF] to-[#ABFFC9] blur-[60px] rounded-full w-[400px] h-[300px]">asd</div>
-            <div className="blur-two bg-[#DFD4FE] blur-[40px] rounded-full w-[400px] h-[300px] -ml-8"></div>
-            <div className="blur-three bg-red-200 blur-[40px] rounded-full w-[400px] h-[300px] -ml-8"></div>
-            <div className="blur-four bg-orange-200 blur-[40px] rounded-full w-[400px] h-[300px] -ml-8"></div>
-          </div> */}
+      <div className="water blur-[40px] absolute md:fixed opacity-[0.3] mt-[300px] mr-auto w-[350px] h-[600px] rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-red-500"></div>
+      <section className="grid grid-cols-12 gap-4 items-center justify-center">
+        <div id="content" className="col-start-2 col-end-13 col-start-2 col-end-12 md:col-start-5 md:col-end-13">
           <section id="info" className="relative z-6">
             <div className="border border-neutral-100 bg-white shadow-custom rounded-full w-fit flex items-center px-2 gap-2">
               <div className="rounded-full w-3 h-3 bg-green-400"></div>
               <span className="text-neutral-600">Available for work</span>
             </div>
-            <h1 className="heading text-2xl md:text-7xl w-3/4 h-[240px] font-medium mt-5 inline-block bg-gradient-to-r text-transparent bg-clip-text from-neutral-500 via-neutral-600 to-neutral-700">
+            {/* text-2xl md:text-7xl w-3/4 h-[240px] overflow-visible font-medium mt-5 inline-block */}
+            <h1 className="text-gray-900 mt-2 md:mt-0 text-4xl md:text-7xl w-full md:w-3/4 pb-3 font-medium">
               Hi, I’m Jacob. A frontend developer who cares about making beautiful products.
             </h1>
           </section>
@@ -97,12 +95,6 @@ export default function Home() {
           <section id="about" className="content-section">
             <h4 className="text-lg md:text-lg font-semibold text-neutral-500">Technologies</h4>
             {/* <div id="divider" className="w-[30px] bg-dark-main h-1 my-3"></div> */}
-            {/* <div className="flex gap-4 items-center">
-              <FaReact className="w-[60px] h-[60px] text-[#61DBFB]"/>
-              <TbBrandNextjs className="w-[60px] h-[60px]" />
-              <SiTailwindcss className="w-[60px] h-[60px] text-[#00bcff]" />
-              <FaDocker className="w-[60px] h-[60px] text-[#099cec]" />
-            </div> */}
             <div className="flex mt-5 flex-col flex-1 md:flex-row gap-7 md:gap-3">
               {TECH_LIST.map((item: any, index: number) => (
                 <div key={index}>
@@ -120,24 +112,32 @@ export default function Home() {
           </section>
 
           <section id="about">
-            <h4 className="text-2xl font-medium text-neutral-600">Regardless of the tech stack,</h4>
+            <h4 className="text-md md:text-2xl font-medium text-neutral-600">Regardless of the tech stack,</h4>
             <div className="flex gap-1">
-              <h2 className="text-5xl font-semibold text-dark-main">My priority is to make a</h2>
-              <SlideUpText />
+              <h2 className="text-3xl md:text-5xl font-semibold text-dark-main">My priority is to make a&nbsp;
+                <span className="heading-two">great product</span>.
+              </h2>
             </div>
           </section>
 
-          <section id="works" className="content-section lg:w-[900px]">
+          <section id="works" className="content-section w-full lg:w-[900px]">
             <div>
               <h4 className="text-lg md:text-lg font-semibold text-neutral-500">Works</h4>
             </div>
-            <div className="flex flex-wrap items-center w-full gap-4 mt-5">
-              {Works.map((work: any, idx: number) => (
-                <div key={idx} className="card">
-                  <div className="w-[400px] h-[300px] relative overflow-hidden">
-                    <Image src={work.imageUrl} alt={work.title} fill />
+            <div className="flex flex-wrap items-center w-full gap-5 mt-5">
+              {works.map((work: any, idx: number) => (
+                <div key={idx}>
+                  <div className="card p-5 shadow-card rounded-lg">
+                    <div className="relative md:w-[400] h-[400]">
+                      <Image 
+                        src={work.imageUrl} 
+                        alt={work.title}
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
                   </div>
-                  <div className="py-5">
+                  <div className="py-4">
                     <h4 className="font-bold">{work.title}</h4>
                     <p>{work.description}</p>
                   </div>
@@ -145,19 +145,16 @@ export default function Home() {
               ))}
             </div>
           </section>
-          <section id="works" className="content-section lg:w-[900px] border-t">
-            <div>
-              <h4 className="text-2xl font-semibold">Experience</h4>
-              <div id="divider" className="w-[30px] bg-black h-1 my-3"></div>
-            </div>
+          <section id="works" className="content-section w-full lg:w-[900px] border-t">
+            <h4 className="text-lg md:text-lg font-semibold text-neutral-500">Experience</h4>
             <div className="w-full flex flex-col gap-y-[50px] mt-[50px]">
               {Experiences.map((exp: any, idx: number) => (
-                <div key={idx} className="flex justify-between w-full">
-                  <p className="font-medium text-3xl"><b>{exp.company}</b></p>
-                  <div className="w-[400px]">
-                    <p className="mt-1 font-semibold text-lg">{exp.role}</p>
-                    <p className="mt-1 text-neutral-600">{exp.location}, {exp.yearStart} - {exp.yearEnd}</p>
-                    <p className="text-neutral-600 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias similique aliquid unde, architecto hic et dolores ratione, enim, tenetur ipsam laudantium magni eos cum esse accusamus commodi natus debitis quis!</p>
+                <div key={idx} className="flex flex-col md:flex-row justify-between w-full">
+                  <p className="font-medium text-xl md:text-3xl"><b>{exp.company}</b></p>
+                  <div className="w-full md:w-[400px]">
+                    <p className="mt-1 font-semibold text-md md:text-lg">{exp.role}</p>
+                    <p className="mt-1 text-sm md:text-md text-neutral-600">{exp.location}, {exp.yearStart} - {exp.yearEnd}</p>
+                    <p className="text-sm md:text-md text-neutral-600 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias similique aliquid unde, architecto hic et dolores ratione, enim, tenetur ipsam laudantium magni eos cum esse accusamus commodi natus debitis quis!</p>
                   </div>
                 </div>
               ))}

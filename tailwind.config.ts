@@ -11,6 +11,7 @@ export default {
       },
       boxShadow: {
         custom: "0px 2px 2px rgba(0,0,0,.04)",
+        card: "0px 2px 15px rgba(0,0,0,.1)",
         small: "0 0 0 1px rgba(0,0,0,.08)",
       },
       fontFamily: {

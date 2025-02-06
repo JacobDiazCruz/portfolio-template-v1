@@ -34,7 +34,7 @@ export default function Menu() {
 
   return (
     <>
-    <header className="flex md:hidden p-5 fixed w-full justify-between">
+    <header className="flex md:hidden p-5 fixed w-full justify-between z-10 relative">
       <div
         id="hamburger-menu"
         className={`w-[25px] ml-auto cursor-pointer relative z-10`}

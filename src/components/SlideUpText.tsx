@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 export default function SlideUpText() {
   const [index, setIndex] = useState(0);
   const textInTimer = 3000;  // Duration for the text to stay visible (text-in)
-  const textOutTimer = 2000; // Duration for the text to be in "text-out" state
+  const textOutTimer = 100; // Duration for the text to be in "text-out" state
 
   // Define a ref to access the animate-text container
   const textRef: any = useRef(null);
@@ -35,6 +35,7 @@ export default function SlideUpText() {
         });
 
         // Add "text-in" class to the current text
+        console.log("txts[index]: ", txts[index]);
         txts[index].classList.add("text-in");
 
         // After the text-in animation duration, add text-out
@@ -48,7 +49,10 @@ export default function SlideUpText() {
           txts[index].classList.remove("text-in", "text-out");
 
           // Update the index to move to the next text
-          setIndex((prevIndex) => (prevIndex + 1) % txtsLen); // Loop back to the start after the last text
+          console.log("IN")
+          // setIndex((prevIndex) => {
+          //   return prevIndex === 0 ? 1 : 0;
+          // });
         }, textInTimer + textOutTimer); // Total time for in and out animations
       }
     }
@@ -63,14 +67,14 @@ export default function SlideUpText() {
 
     // Cleanup interval on component unmount
     return () => clearInterval(timerId);
-  }, [index]);  // Trigger the effect when the index changes
+  }, [index]);
 
   return (
     <div className="home-text">
       <p className="animate-text" ref={textRef}>
         {texts.map((text, i) => (
           <span
-            className={`${text.gradientColor} text-5xl font-semibold h-[55px] bg-gradient-to-r ml-2 inline-block text-transparent bg-clip-text`}
+            className={`${text.gradientColor}`}
             key={i}
           >
             {text.value}
