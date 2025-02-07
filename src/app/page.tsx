@@ -1,17 +1,17 @@
-import Menu from "@/components/Menu";
 import About from "@/components/About";
 import Works from "@/components/Works";
 import Experience from "@/components/Experience";
-import { FOOTER, INTRO } from "@/config";
+import { FOOTER, INTRO } from "@/config/content";
+import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
 
   return (
     <main className="w-full bg-white font-sans overflow-hidden relative">
-      <Menu />
+      <Sidebar />
       <div className="water blur-[40px] absolute md:fixed opacity-[0.3] mt-[300px] mr-auto w-[350px] h-[600px] rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-red-500" />
       <section className="grid grid-cols-12 gap-4 items-center justify-center">
-        <div id="content" className="col-start-2 col-end-13 col-start-2 col-end-12 md:col-start-5 md:col-end-13">
+        <div id="content" className="col-start-2 col-end-12 col-start-2 col-end-12 md:col-start-5 md:col-end-13">
           <section id="info" className="relative z-6">
             <div className="border border-neutral-100 bg-white shadow-custom rounded-full w-fit flex items-center px-2 gap-2">
               <div className="rounded-full w-3 h-3 bg-green-400" />

@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "@/config";
+import { EXPERIENCES } from "@/config/content";
 
 export default function Experience() {
   return (

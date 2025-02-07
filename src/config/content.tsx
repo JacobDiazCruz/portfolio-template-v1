@@ -6,6 +6,37 @@ import { SiTailwindcss } from "react-icons/si";
 import JSIcon from "../assets/js-icon.png";
 import MongoDBIcon from "../assets/mongo-icon.png";
 
+export const SIDEBAR_ITEMS = {
+  mainItems: [
+    {
+      label: "Intro",
+      active: true
+    },
+    {
+      label: "About",
+      active: false
+    },
+    {
+      label: "Works",
+      active: false
+    },
+    {
+      label: "Experience",
+      active: false
+    }
+  ],
+  externalLinks: [
+    {
+      label: "Linkedin",
+      href: "/"
+    },
+    {
+      label: "Resume",
+      href: "/"
+    },
+  ]
+};
+
 export const INTRO = {
   status: "Available for work",
   heading: "Hi, I’m Jacob. A frontend developer who cares about making beautiful products.",

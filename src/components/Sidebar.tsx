@@ -1,34 +1,34 @@
 "use client";
 
+import { SIDEBAR_ITEMS } from "@/config/content";
 import Link from "next/link";
 import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
-export default function Menu() {
+export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const [menuItems, _] = useState([
-    {
-      label: "Intro",
-      active: true
-    },
-    {
-      label: "About",
-      active: false
-    },
-    {
-      label: "Works",
-      active: false
-    },
-    {
-      label: "Experience",
-      active: false
-    }
-  ])
+  const [mainItems, _] = useState(SIDEBAR_ITEMS.mainItems);
+
+  const MainItems = () => {
+    return (
+      <ul className="space-y-1 h-[300px]">
+        {mainItems?.map((link: any, idx: number) => (
+          <li className="flex items-center gap-2 cursor-pointer" key={idx}>
+            <Link href={`#${link.label.toLowerCase()}`}>
+              <span className={`${link.active ? "text-dark-main" : "text-neutral-400"} font-medium`}>
+                {link.label}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    )
+  }
 
   return (
     <>
@@ -58,17 +58,7 @@ export default function Menu() {
         {isOpen && (
           <div className="flex fixed justify-end right-0 top-0 bg-white w-full h-[100vh]">
             <div className="flex flex-col items-center justify-center w-full h-full">
-              <ul className="space-y-1 h-[400px]">
-                {menuItems.map((item: any, idx: number) => (
-                  <li className="flex items-center gap-2 cursor-pointer" key={idx}>
-                    <span
-                      className={`${item.active ? "text-dark-main" : "text-neutral-400"} font-medium`}
-                    >
-                      {item.label}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <MainItems />
             </div>
           </div>
         )}
@@ -80,36 +70,19 @@ export default function Menu() {
         </div>
         <div className="flex items-center justify-center">
           <div className="flex flex-col items-center px-10 mt-[100px]">
-            <ul className="space-y-1 h-[300px]">
-              {menuItems.map((item: any, idx: number) => (
-                <li className="flex items-center gap-2 cursor-pointer" key={idx}>
-                  <Link href={`#${item.label.toLowerCase()}`}>
-                    <span className={`${item.active ? "text-dark-main" : "text-neutral-400"} font-medium`}>
-                      {item.label}
+            <MainItems />
+            <ul className="space-y-4">
+              {SIDEBAR_ITEMS.externalLinks.map((link: any, idx: number) => (
+                <li key={idx}>
+                  <Link href={link.href} target="_blank">
+                    <span className="flex items-center gap-1">
+                      {link.label}
+                      <GoArrowUpRight />
                     </span>
+                    <div className="w-full mt-[1px] bg-[#000] h-[1px]"></div>
                   </Link>
                 </li>
               ))}
-            </ul>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/">
-                  <span className="flex items-center gap-1">
-                    Linkedin
-                    <GoArrowUpRight />
-                  </span>
-                  <div className="w-full mt-[1px] bg-[#000] h-[1px]"></div>
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <span className="flex items-center gap-1">
-                    Resume
-                    <GoArrowUpRight />
-                  </span>
-                  <div className="w-full mt-[1px] bg-[#000] h-[1px]"></div>
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

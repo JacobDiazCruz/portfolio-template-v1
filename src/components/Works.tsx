@@ -1,4 +1,4 @@
-import { WORKS } from "@/config";
+import { WORKS } from "@/config/content";
 import Image from "next/image";
 
 export default function Works() {

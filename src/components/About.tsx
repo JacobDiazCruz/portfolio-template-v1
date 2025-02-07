@@ -1,4 +1,4 @@
-import { ABOUT } from "@/config";
+import { ABOUT } from "@/config/content";
 
 export default function About() {
   return (
@@ -12,7 +12,7 @@ export default function About() {
       <div id="about" className="content-section">
         <h4 className="text-lg md:text-lg font-semibold text-neutral-500">{ABOUT.sectionTwo.title}</h4>
         <div className="flex mt-5 flex-col flex-1 md:flex-row gap-7 md:gap-3">
-          <ul className="frontend-list flex flex-col gap-3 mt-5">
+          <ul className="frontend-list flex flex-col md:flex-row md:flex-wrap w-[600px] gap-3 mt-5">
             {ABOUT.sectionTwo.tech.map((item: any, index: number) => (
               <li key={index} className="flex items-center w-full md:w-[180px] h-[60px] gap-3 bg-white rounded-lg p-4 text-sm shadow-custom border-custom border">
                 {item.icon}
