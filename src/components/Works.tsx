@@ -15,7 +15,7 @@ export default function Works() {
             {work?.href ? (
               <Link href={work?.href} className="w-[300px]" target="_blank">
                 <div className="card p-5 shadow-card rounded-lg">
-                  <div className="relative md:w-[400] h-[400]">
+                  <div className="relative w-[400px] h-[400px]">
                     <Image 
                       src={work.imageUrl} 
                       alt={work.title}
@@ -32,7 +32,7 @@ export default function Works() {
             ) : (
               <>
                 <div className="card p-5 shadow-card rounded-lg">
-                  <div className="relative md:w-[400] h-[400]">
+                  <div className="relative w-[400px] h-[400px]">
                     <Image 
                       src={work.imageUrl} 
                       alt={work.title}
