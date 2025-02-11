@@ -1,11 +1,12 @@
 import { EXPERIENCES } from "@/config/content";
+import { Experience } from "@/types";
 
 export default function Experience() {
   return (
     <section id="experience" className="content-section w-full lg:w-[900px] border-t">
       <h4 className="text-lg md:text-lg font-semibold text-neutral-500">Experience</h4>
       <div className="w-full flex flex-col gap-y-[50px] mt-[50px]">
-        {EXPERIENCES.map((exp: any, idx: number) => (
+        {EXPERIENCES.map((exp: Experience, idx: number) => (
           <div key={idx} className="flex flex-col md:flex-row justify-between w-full">
             <p className="font-medium text-xl md:text-3xl"><b>{exp.company}</b></p>
             <div className="w-full md:w-[400px]">

@@ -1,5 +1,10 @@
+import { ReactNode } from "react";
 import { ABOUT } from "@/config/content";
 
+export interface TechItem {
+  icon: ReactNode;
+  name: string;
+}
 export default function About() {
   return (
     <section id="about" className="content-section">
@@ -13,7 +18,7 @@ export default function About() {
         <h4 className="text-lg md:text-lg font-semibold text-neutral-500">{ABOUT.sectionTwo.title}</h4>
         <div className="flex mt-5 flex-col flex-1 md:flex-row gap-7 md:gap-3">
           <ul className="frontend-list flex flex-col md:flex-row md:flex-wrap w-full md:w-[600px] gap-3">
-            {ABOUT.sectionTwo.tech.map((item: any, index: number) => (
+            {ABOUT.sectionTwo.tech.map((item: TechItem, index: number) => (
               <li key={index} className="flex items-center w-full md:w-[180px] h-[60px] gap-3 rounded-lg p-4 text-sm shadow-custom border-custom border">
                 <span>{item.icon}</span>
                 {item.name}
