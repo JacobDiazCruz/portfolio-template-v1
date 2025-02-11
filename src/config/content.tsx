@@ -9,44 +9,40 @@ import MongoDBIcon from "../assets/mongo-icon.png";
 export const SIDEBAR_ITEMS = {
   mainItems: [
     {
-      label: "Intro",
+      label: "intro",
       active: true
     },
     {
-      label: "About",
+      label: "about",
       active: false
     },
     {
-      label: "Works",
+      label: "works",
       active: false
     },
     {
-      label: "Experience",
+      label: "experience",
       active: false
     }
   ],
   externalLinks: [
     {
-      label: "Linkedin",
-      href: "/"
-    },
-    {
-      label: "Resume",
-      href: "/"
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/jacob-cruz-b3404b165/"
     },
   ]
 };
 
 export const INTRO = {
   status: "Available for work",
-  heading: "Hi, I’m Jacob. A frontend developer who cares about making beautiful products.",
+  heading: "Hi, I’m Jacob. I design and build software to empower people.",
 }
 
 export const ABOUT = {
   title: "About me",
-  description: "6 years of industry experience as a frontend developer, I specialize in ReactJS as my primary framework. I am based in New York and I am open to remote work and/or relocation for the right opportunity.",
+  description: "7 years of industry experience as a software engineer, I specialize in JavaScript as my primary tech. I am based in Manila and I am open to full-time or part-time remote work opportunities.",
   sectionTwo: {
-    title: "Technologies",
+    title: "Tech stack",
     tech: [
       {
         name: "JavaScript",
@@ -98,59 +94,67 @@ export const ABOUT = {
 
 export const WORKS = [
   {
-    imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1738643606/Portfolio-templates/Screenshot_2025-02-04_at_12.33.02_PM_q4nuyi.png",
+    imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1738639938/Portfolio-templates/oneguru-img-2_z9oueh.png",
     title: "OneGuru",
     description: "The free and fun way for devs to learn UI/UX design.",
+    href: "https://oneguru.io/"
   },
   {
-    imageUrl: "https://theuxda.com/storage/app/media/blog/New/hero-image/Updated%20case%20study%20hero%20images%202024/Case%20study%20-%20Apple%20Vision%20Pro.jpg",
+    imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739118146/Portfolio-templates/new-2_nxq1ov.png",
     title: "Manuela",
-    description: "The free and fun way for devs to learn UI/UX design.",
+    description: "A virtual fitting room for fashion enthusiasts.",
+    href: "https://manuela-fe.vercel.app/"
   },
-  {
-    imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*zozNB64v55MEzlvOE9lHnQ.png",
-    title: "OneGuru",
-    description: "The free and fun way for devs to learn UI/UX design.",
-  },
-  {
-    imageUrl: "https://theuxda.com/storage/app/media/blog/New/hero-image/Updated%20case%20study%20hero%20images%202024/Case%20study%20-%20Apple%20Vision%20Pro.jpg",
-    title: "Manuela",
-    description: "The free and fun way for devs to learn UI/UX design.",
-  },
+  // {
+  //   imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739118539/Portfolio-templates/mockup2_iq9w6n.png",
+  //   title: "Gordon Ramsay Site Re-design",
+  //   description: "Redesigning an online restaurant booking web app."
+  // },
+  // {
+  //   imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1738643606/Portfolio-templates/Screenshot_2025-02-04_at_12.33.02_PM_q4nuyi.png",
+  //   title: "GSL Construction Mockup",
+  //   description: "A design mockup for GSL Construction."
+  // },
+  // {
+  //   imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739157047/Rivals%20positioning/Screenshot_2025-02-10_at_11.10.26_AM_k2lypy.png",
+  //   title: "PeakRivals",
+  //   description: "A Marvel Rival's Guide platform with over 30,000 monthly visitors.",
+  //   href: "https://www.peakrivals.com/"
+  // },
 ];
 
 export const EXPERIENCES = [
   {
-    role: "Front-end Developer",
-    company: "Company Name",
-    location: "New York, USA",
-    yearStart: "2018",
-    yearEnd: "2022",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias similique aliquid unde, architecto hic et dolores ratione, enim, tenetur ipsam laudantium magni eos cum esse accusamus commodi natus debitis quis!"
+    role: "Full Stack Engineer",
+    company: "MVSI",
+    location: "Melbourne, Australia",
+    yearStart: "2024",
+    yearEnd: "2024",
+    description: "As a full-stack engineer, I developed new features for existing clients and enhanced those that were causing issues within the system."
   },
   {
-    role: "Front-end Developer",
-    company: "Company Name",
-    location: "New York, USA",
-    yearStart: "2018",
-    yearEnd: "2022",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias similique aliquid unde, architecto hic et dolores ratione, enim, tenetur ipsam laudantium magni eos cum esse accusamus commodi natus debitis quis!"
+    role: "Senior Software Engineer",
+    company: "Zesty / Emapta",
+    location: "San Diego, California, United States",
+    yearStart: "2022",
+    yearEnd: "2023",
+    description: "As a senior engineer, I handled the development of the media and global menu features and enhanced the configuration of the client's front-end process."
   },
   {
-    role: "Front-end Developer",
-    company: "Company Name",
-    location: "New York, USA",
-    yearStart: "2018",
+    role: "Senior Software Engineer / Front-end Lead",
+    company: "Yondu, Inc.",
+    location: "BGC, Philippines",
+    yearStart: "2019",
     yearEnd: "2022",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias similique aliquid unde, architecto hic et dolores ratione, enim, tenetur ipsam laudantium magni eos cum esse accusamus commodi natus debitis quis!"
+    description: "I led the development of Vessel from scratch, an in-house product at Yondu, which provides e-commerce businesses with a wide variety of features, such as setting up online stores and integrating payment options."
   },
   {
-    role: "Front-end Developer",
-    company: "Company Name",
-    location: "New York, USA",
-    yearStart: "2018",
-    yearEnd: "2022",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias similique aliquid unde, architecto hic et dolores ratione, enim, tenetur ipsam laudantium magni eos cum esse accusamus commodi natus debitis quis!"
+    role: "Software Engineer",
+    company: "Willis Towers Watson",
+    location: "BGC, Philippines",
+    yearStart: "2019",
+    yearEnd: "2019",
+    description: "I design and developed survey web applications for our clients in Europe."
   }
 ];
 
@@ -158,12 +162,12 @@ export const FOOTER = {
   heading: "Thank you.",
   links: [
     {
-      label: "me@email.com",
-      href: "/"
+      label: "Email me",
+      href: "cjacob.d.cruz@gmail.com"
     },
     {
-      label: "Linkedin",
-      href: "/"
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/jacob-cruz-b3404b165/"
     }
   ]
 }

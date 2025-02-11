@@ -2,22 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
-body {
-  /* color: var(--foreground);
-  background: var(--background); */
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -35,7 +25,6 @@ body {
 }
 
 .content-section {
-  /* padding: calc(var(--grid--app-xheight) - 11px) 0 80px 0 !important; */
   padding: 100px 0 100px 0;
 }
 

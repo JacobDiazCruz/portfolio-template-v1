@@ -2,25 +2,38 @@
 
 import { SIDEBAR_ITEMS } from "@/config/content";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
 export default function Sidebar() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const [stage, setStage] = useState("intro");
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    router.push(`/#${stage}`)
+  }, [stage])
+
   const [mainItems, _] = useState(SIDEBAR_ITEMS.mainItems);
+ 
+  const handleLinkClick = (linkLabel: string) => {
+    setIsOpen(false);
+    setStage(linkLabel)
+  }
 
   const MainItems = () => {
     return (
       <ul className="space-y-1 h-[300px]">
         {mainItems?.map((link: any, idx: number) => (
           <li className="flex items-center gap-2 cursor-pointer" key={idx}>
-            <Link href={`#${link.label.toLowerCase()}`}>
-              <span className={`${link.active ? "text-dark-main" : "text-neutral-400"} font-medium`}>
+            <Link onClick={() => handleLinkClick(link.label)} 
+            href={`#${link.label}`}>
+              <span className={`${stage === link.label ? "text-dark-main" : "text-neutral-400"} capitalize font-medium`}>
                 {link.label}
               </span>
             </Link>
@@ -32,7 +45,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <header className="flex md:hidden p-5 fixed w-full justify-between z-[20] relative">
+      <header className="flex md:hidden p-5 fixed w-full justify-between z-[20]">
         <div
           id="hamburger-menu"
           className={`w-[25px] ml-auto cursor-pointer relative z-10`}
