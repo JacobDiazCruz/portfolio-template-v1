@@ -5,7 +5,7 @@ import MongoDBIcon from "../assets/mongo-icon.png";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";
-import { Experience, Work } from "@/types";
+import { IExperience, IWork } from "@/types";
 
 export const SIDEBAR_ITEMS = {
   mainItems: [
@@ -93,7 +93,7 @@ export const ABOUT = {
   }
 };
 
-export const WORKS: Work[] = [
+export const WORKS: IWork[] = [
   {
     imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1738639938/Portfolio-templates/oneguru-img-2_z9oueh.png",
     title: "OneGuru",
@@ -108,7 +108,7 @@ export const WORKS: Work[] = [
   },
 ];
 
-export const EXPERIENCES: Experience[] = [
+export const EXPERIENCES: IExperience[] = [
   {
     role: "Full Stack Engineer",
     company: "Company Name",

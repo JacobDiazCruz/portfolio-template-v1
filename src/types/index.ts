@@ -1,11 +1,11 @@
-export interface Work {
+export interface IWork {
   imageUrl: string;
   title: string;
   description: string;
   href: string;
 }
 
-export interface Experience {
+export interface IExperience {
   role: string;
   company: string;
   location: string;
@@ -14,12 +14,12 @@ export interface Experience {
   description: string;
 }
 
-export interface SidebarMainItem {
+export interface ISidebarMainItem {
   label: string;
   active: boolean;
 }
 
-export interface SidebarExternalLink {
+export interface ISidebarExternalLink {
   label: string;
   href: string;
 }

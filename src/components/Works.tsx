@@ -1,5 +1,5 @@
 import { WORKS } from "@/config/content";
-import { Work } from "@/types";
+import { IWork } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ export default function Works() {
         <h4 className="text-lg md:text-lg font-semibold text-neutral-500">Selected Works</h4>
       </div>
       <div className="flex flex-wrap items-center w-full gap-5 mt-5">
-        {WORKS.map((work: Work, idx: number) => (
+        {WORKS.map((work: IWork, idx: number) => (
           <div key={idx}>
             {work?.href ? (
               <Link href={work?.href} className="w-[300px]" target="_blank">
