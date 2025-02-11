@@ -1,6 +1,7 @@
 "use client";
 
 import { SIDEBAR_ITEMS } from "@/config/content";
+import { SidebarMainItem } from "@/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -18,8 +19,6 @@ export default function Sidebar() {
   useEffect(() => {
     router.push(`/#${stage}`)
   }, [stage])
-
-  const [mainItems, _] = useState(SIDEBAR_ITEMS.mainItems);
  
   const handleLinkClick = (linkLabel: string) => {
     setIsOpen(false);
@@ -29,7 +28,7 @@ export default function Sidebar() {
   const MainItems = () => {
     return (
       <ul className="space-y-1 h-[300px]">
-        {mainItems?.map((link: any, idx: number) => (
+        {SIDEBAR_ITEMS.mainItems?.map((link: SidebarMainItem, idx: number) => (
           <li className="flex items-center gap-2 cursor-pointer" key={idx}>
             <Link onClick={() => handleLinkClick(link.label)} 
             href={`#${link.label}`}>

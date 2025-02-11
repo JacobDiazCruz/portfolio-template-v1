@@ -13,3 +13,8 @@ export interface Experience {
   yearEnd: string;
   description: string;
 }
+
+export interface SidebarMainItem {
+  label: string;
+  active: boolean;
+}

@@ -1,8 +1,5 @@
 import Image from "next/image";
-import { BiLogoTypescript } from "react-icons/bi";
-import { GrReactjs } from "react-icons/gr";
 import { IoLogoNodejs } from "react-icons/io5";
-import { SiTailwindcss } from "react-icons/si";
 import JSIcon from "../assets/js-icon.png";
 import MongoDBIcon from "../assets/mongo-icon.png";
 import { RiReactjsLine } from "react-icons/ri";
