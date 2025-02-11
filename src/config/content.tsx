@@ -5,6 +5,9 @@ import { IoLogoNodejs } from "react-icons/io5";
 import { SiTailwindcss } from "react-icons/si";
 import JSIcon from "../assets/js-icon.png";
 import MongoDBIcon from "../assets/mongo-icon.png";
+import { RiReactjsLine } from "react-icons/ri";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiTypescript } from "react-icons/si";
 
 export const SIDEBAR_ITEMS = {
   mainItems: [
@@ -28,7 +31,7 @@ export const SIDEBAR_ITEMS = {
   externalLinks: [
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/jacob-cruz-b3404b165/"
+      href: "https://www.linkedin.com/"
     },
   ]
 };
@@ -40,7 +43,7 @@ export const INTRO = {
 
 export const ABOUT = {
   title: "About me",
-  description: "7 years of industry experience as a software engineer, I specialize in JavaScript as my primary tech. I am based in Manila and I am open to full-time or part-time remote work opportunities.",
+  description: "7 years of industry experience as a software engineer, I specialize in JavaScript as my primary tech. I am based in New York and I am open to full-time or part-time remote work opportunities.",
   sectionTwo: {
     title: "Tech stack",
     tech: [
@@ -58,15 +61,15 @@ export const ABOUT = {
       },
       {
         name: "React",
-        icon: <GrReactjs className="text-[#00ddff] text-lg" />,
+        icon: <RiReactjsLine className="text-[#61DBFB] text-lg" />,
       },
       {
-        name: "Tailwind CSS",
-        icon: <SiTailwindcss className="text-[#00c0fe] text-lg" />,
+        name: "NextJS",
+        icon: <TbBrandNextjs className="text-neutral-500 text-lg" />,
       },
       {
         name: "TypeScript",
-        icon: <BiLogoTypescript className="text-[#007acc] text-2xl" />,
+        icon: <SiTypescript className="text-blue-500 text-2xl" />,
       },
       {
         name: "NodeJS",
@@ -105,57 +108,25 @@ export const WORKS = [
     description: "A virtual fitting room for fashion enthusiasts.",
     href: "https://manuela-fe.vercel.app/"
   },
-  // {
-  //   imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739118539/Portfolio-templates/mockup2_iq9w6n.png",
-  //   title: "Gordon Ramsay Site Re-design",
-  //   description: "Redesigning an online restaurant booking web app."
-  // },
-  // {
-  //   imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1738643606/Portfolio-templates/Screenshot_2025-02-04_at_12.33.02_PM_q4nuyi.png",
-  //   title: "GSL Construction Mockup",
-  //   description: "A design mockup for GSL Construction."
-  // },
-  // {
-  //   imageUrl: "https://res.cloudinary.com/dqrtlfjc0/image/upload/v1739157047/Rivals%20positioning/Screenshot_2025-02-10_at_11.10.26_AM_k2lypy.png",
-  //   title: "PeakRivals",
-  //   description: "A Marvel Rival's Guide platform with over 30,000 monthly visitors.",
-  //   href: "https://www.peakrivals.com/"
-  // },
 ];
 
 export const EXPERIENCES = [
   {
     role: "Full Stack Engineer",
-    company: "MVSI",
-    location: "Melbourne, Australia",
+    company: "Company Name",
+    location: "New York, USA.",
     yearStart: "2024",
     yearEnd: "2024",
     description: "As a full-stack engineer, I developed new features for existing clients and enhanced those that were causing issues within the system."
   },
   {
     role: "Senior Software Engineer",
-    company: "Zesty / Emapta",
+    company: "Company Name",
     location: "San Diego, California, United States",
     yearStart: "2022",
     yearEnd: "2023",
     description: "As a senior engineer, I handled the development of the media and global menu features and enhanced the configuration of the client's front-end process."
   },
-  {
-    role: "Senior Software Engineer / Front-end Lead",
-    company: "Yondu, Inc.",
-    location: "BGC, Philippines",
-    yearStart: "2019",
-    yearEnd: "2022",
-    description: "I led the development of Vessel from scratch, an in-house product at Yondu, which provides e-commerce businesses with a wide variety of features, such as setting up online stores and integrating payment options."
-  },
-  {
-    role: "Software Engineer",
-    company: "Willis Towers Watson",
-    location: "BGC, Philippines",
-    yearStart: "2019",
-    yearEnd: "2019",
-    description: "I design and developed survey web applications for our clients in Europe."
-  }
 ];
 
 export const FOOTER = {

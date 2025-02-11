@@ -32,12 +32,12 @@ export default function Home() {
             </h4>
             <div className="flex items-center gap-2 md:gap-12 mt-5 w-1/2 flex-wrap">
               <div>
-                <a href="mailto:cjacob.d.cruz@gmail.com">
+                <a href="mailto:test@gmail.com">
                   <p className="mt-1">Email</p>
                   <div className="w-full h-[1px] bg-neutral-300" />
                 </a>
               </div>
-              <Link href="https://www.linkedin.com/in/jacob-cruz-b3404b165/" target="_blank">
+              <Link href="https://www.linkedin.com/in/" target="_blank">
                 <p className="mt-1">LinkedIn</p>
                 <div className="w-full h-[1px] bg-neutral-300" />
               </Link>
