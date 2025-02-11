@@ -1,7 +1,7 @@
 "use client";
 
 import { SIDEBAR_ITEMS } from "@/config/content";
-import { SidebarMainItem } from "@/types";
+import { SidebarExternalLink, SidebarMainItem } from "@/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -84,7 +84,7 @@ export default function Sidebar() {
           <div className="flex flex-col items-center px-10 mt-[100px]">
             <MainItems />
             <ul className="space-y-4">
-              {SIDEBAR_ITEMS.externalLinks.map((link: any, idx: number) => (
+              {SIDEBAR_ITEMS.externalLinks.map((link: SidebarExternalLink, idx: number) => (
                 <li key={idx}>
                   <Link href={link.href} target="_blank">
                     <span className="flex items-center gap-1">

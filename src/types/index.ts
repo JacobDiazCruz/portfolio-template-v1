@@ -18,3 +18,8 @@ export interface SidebarMainItem {
   label: string;
   active: boolean;
 }
+
+export interface SidebarExternalLink {
+  label: string;
+  href: string;
+}
