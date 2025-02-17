@@ -36,7 +36,7 @@ export const SIDEBAR_ITEMS = {
 
 export const INTRO = {
   status: "Available for work",
-  heading: "Hi, I’m Johnny. I design and build software to empower people.",
+  heading: "Hi, I’m Jacob. I design and build software to empower people.",
 }
 
 export const ABOUT = {
